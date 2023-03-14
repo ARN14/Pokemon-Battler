@@ -16,7 +16,12 @@ The repo uses Inquirer.js. A javascript library that allows the user to interact
 
 ## Testing
 The tests can be run by installing jest: `npm install jest`  
-After installing javascript and jest, you must update the package.json file, under "scripts", change "test" to `"jest"`  
+After installing javascript and jest, you must update the package.json file, under "scripts", change the value of the "test" to `"jest"`  
+```
+"scripts": {
+    "test": "jest"
+  }
+```
 You will then be able to run `npm test` to run the tests  
 The jest version used in this repo was 29.5.0
 
