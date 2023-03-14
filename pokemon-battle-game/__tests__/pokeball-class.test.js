@@ -81,9 +81,7 @@ describe("Pokeball", () => {
     test("when throw() is called, with a stored pokemon, should log message to user", () => {
       const ball = new Pokeball();
       const charmander = new Charmander("Charmander", 44, 17);
-      //capture pokemon
       ball.throw(charmander);
-      //release pokemon
       ball.throw();
 
       expect(consoleSpy).toHaveBeenCalledTimes(2);
@@ -97,15 +95,12 @@ describe("Pokeball", () => {
       const charmander = new Charmander("Charmander", 44, 17);
       const rattata = new Rattata("Rattata", 50, 15);
 
-      //capture charmander
       ball.throw(charmander);
       expect(ball.contains()).toBe("Charmander");
 
-      //release charmander
       ball.throw();
       expect(ball.contains()).toBe("empty");
 
-      //capture rattata
       ball.throw(rattata);
       expect(ball.contains()).toBe("Rattata");
     });
